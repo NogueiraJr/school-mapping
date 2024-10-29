@@ -26,6 +26,9 @@ function Home() {
   return (
     <div className="home-container">
       <h1 className="home-title">Navegação Escolar</h1>
+      <h1 className="home-title2">COC FEIRA DO EMPREENDEDOR 2024</h1>
+      <h1 className="home-title2">Turma 7A Manhã - Grupo 2</h1>
+      <h1 className="home-title3">(João Pedro, Eloá Nogueira, Nicolas, Guilherme, Luís Roberto)</h1>
       <img 
         src="https://i.pinimg.com/originals/84/21/13/842113efadbfb8064345cbbf144e7fe5.jpg" 
         alt="Corredor da escola" 
