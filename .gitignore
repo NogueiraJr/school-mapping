@@ -1,0 +1,52 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Diretório de dependências do Node.js
+node_modules/
+
+# Diretório de build
+build/
+dist/
+
+# Arquivos de cache e relatórios de erro do React
+.cache/
+.eslintcache
+
+# Configurações do Editor e do Sistema Operacional
+.DS_Store
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Configurações locais de ambiente
+.env
+.env.local
+.env.*.local
+
+# Arquivos de lock
+package-lock.json
+yarn.lock
+
+# Arquivos de teste de snapshot do Jest
+__snapshots__/
+*.spec.js.snap
+*.test.js.snap
+
+# Arquivos de cobertura de testes
+coverage/
+
+# Ignorar arquivos temporários do React e Babel
+.tmp/
+.parcel-cache/
+.babelrc
+.cache-loader/
+
+# Relatórios de erros do npm
+npm-error.log
