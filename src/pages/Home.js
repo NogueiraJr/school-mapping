@@ -1,10 +1,27 @@
 // src/pages/Home.js
-import React from 'react';
-import { useSpeech } from '../hooks/useSpeech';
-import './Home.css'; // Importa o arquivo CSS
+import React, { useEffect, useState } from 'react';
+import TimelineSteps from '../components/TimelineSteps'; // Importa o componente
+import './Home.css';
 
 function Home() {
-  useSpeech('Bem-vindo à página inicial do aplicativo de navegação escolar.');
+  const steps = [
+    "Você saiu do Elevador, vire à direita e siga.",
+    "Agora você está no corredor, vire à direita e siga.",
+    "Pare, você chegou na porta da sua sala de aula, que está ao seu lado esquerdo.",
+    "Entre na sala de aula, seu lugar é na primeira carteira na segunda fileira. Bons estudos!"
+  ];
+
+  const [currentStep, setCurrentStep] = useState(0);
+
+  useEffect(() => {
+    if (currentStep < steps.length - 1) { // Continue apenas se não for o último passo
+      const intervalId = setInterval(() => {
+        setCurrentStep((prevStep) => prevStep + 1); // Avança para o próximo passo
+      }, 9000); // Troca de passo a cada 9 segundos
+
+      return () => clearInterval(intervalId);
+    }
+  }, [currentStep, steps.length]); // Adiciona currentStep como dependência
 
   return (
     <div className="home-container">
@@ -14,13 +31,9 @@ function Home() {
         alt="Corredor da escola" 
         className="home-image"
       />
-      {/* <button className="home-button">Sensores Bluetooth</button> */}
+      <TimelineSteps steps={steps} currentStep={currentStep} /> {/* Adiciona o componente TimelineSteps */}
     </div>
   );
 }
 
 export default Home;
-
-
-
-

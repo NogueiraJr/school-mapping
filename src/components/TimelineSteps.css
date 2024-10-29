@@ -1,0 +1,34 @@
+/* src/styles/TimelineSteps.css */
+
+.timeline-container {
+  width: 50%; /* Define a largura da linha do tempo para 50% */
+  margin: 0 auto; /* Centraliza o componente horizontalmente */
+}
+
+.timeline-item {
+  font-size: 1.5rem; /* Aumenta o tamanho do texto */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.ant-timeline-item-head {
+  width: 30px; /* Aumenta o tamanho da bolinha */
+  height: 30px; /* Aumenta o tamanho da bolinha */
+  line-height: 30px; /* Centraliza o texto na bolinha */
+  font-size: 20px; /* Aumenta o tamanho do texto da bolinha */
+  background-color: #007bff; /* Cor da bolinha */
+  border: 2px solid #0056b3; /* Borda da bolinha */
+}
+
+.ant-timeline-item-head.ant-timeline-item-head-active {
+  background-color: #ffcc00; /* Cor da bolinha quando ativo (passo falado) */
+  border-color: #e6b800; /* Borda da bolinha quando ativo (passo falado) */
+}
+
+.ant-timeline-item-content {
+  margin-left: 10px; /* Adiciona espaço à esquerda do texto */
+}
+
+.ant-timeline-item.active {
+  font-weight: bold; /* Destaca o passo atual */
+  color: #ff6600; /* Cor do texto do passo atual */
+}
