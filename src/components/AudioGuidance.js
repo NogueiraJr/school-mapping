@@ -1,13 +1,16 @@
 // components/AudioGuidance.js
 import React from 'react';
-import { useSpeechSynthesis } from 'react-speech-kit';
+import { Speech } from 'react-speech';
 
 export default function AudioGuidance({ message }) {
-  const { speak } = useSpeechSynthesis();
-
   return (
-    <button onClick={() => speak({ text: message })}>
-      Ouvir Instruções
-    </button>
+    <div>
+      <button onClick={() => {
+        const utterance = new SpeechSynthesisUtterance(message);
+        window.speechSynthesis.speak(utterance);
+      }}>
+        Ouvir Instruções
+      </button>
+    </div>
   );
 }
